@@ -230,31 +230,31 @@
 // Оголоси приватні властивості #login #email, доступ до яких зроби
 // через геттер та сеттер login email
 
-class Client {
-  #login;
-  #email;
+// class Client {
+//   #login;
+//   #email;
 
-  constructor(login, email) {
-    this.#login = login;
-    this.#email = email;
-  }
-  get login() {
-    return this.#login;
-  }
-  set login(newLogin) {
-    this.#login = newLogin;
-  }
-  get email() {
-    return this.#email;
-  }
-  set email(newEmail) {
-    this.#email = newEmail;
-  }
-}
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+//   get login() {
+//     return this.#login;
+//   }
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+//   get email() {
+//     return this.#email;
+//   }
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
 
-const client = new Client("vasya", "vasya@gmail.com");
-console.log(client.login);
-console.log(client.email);
+// const client = new Client("vasya", "vasya@gmail.com");
+// console.log(client.login);
+// console.log(client.email);
 
 // Завдання 13:
 
