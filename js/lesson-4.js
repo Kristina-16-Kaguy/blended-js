@@ -112,6 +112,8 @@ UlEl.innerHTML = "";
 // Парні числа повинні мати зелений фон (додати клас even),
 // Непарні числа - жовтий фон (додати клас odd).
 
+// const newDiv
+
 // const randomNumber = () => Math.floor(Math.random() * 100) + 1;
 
 // Завдання 3
@@ -143,6 +145,24 @@ UlEl.innerHTML = "";
 // щоб на місце повернулось дефолтне знаяення "Anonymous".
 // При відправці форми, очисти інпут, верни чек бокс у положення
 // false, верни дефолтне значення "Anonymous" у span.
+const formEl = document.querySelector(".js-contact-form");
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const inputValue = event.target.elements.userName.value.trim();
+  const isChecked = event.target.elements.accept.checked;
+
+  if ((inputValue = "")) {
+    alert("Input cannot be empty!");
+    return;
+  }
+
+  if (!isChecked) {
+    alert("You need to accept!");
+  }
+
+  console.log({ userName: inputValue });
+  formEl.reset();
+});
 
 // Завдання 4
 // Використовуй шаблон розмітки з файлу html та напиши наступний функціонал:
