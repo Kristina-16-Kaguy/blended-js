@@ -217,3 +217,23 @@ input.addEventListener('input', () => {
 //  наступний функціонал:
 // При кліку на кнопку "Зменшити" квадрат стає меньшим на 20 пікселів,
 // При кліку на кнопку "Збільшити" - квадрат стає більшим на 20 пікселів.
+
+const btnIncrease = document.querySelector('#increase');
+const btnDecrease = document.querySelector('#decrease');
+const box = document.querySelector('.box');
+
+btnIncrease.addEventListener('click', () => {
+  changeSize(20, 20);
+});
+
+btnDecrease.addEventListener('click', () => {
+  changeSize(-20, -20);
+});
+
+function changeSize(width, height) {
+  const computedStyles = window.getComputedStyle(box);
+  const currentWidth = Number.parseInt(computedStyles.width);
+  const currentHeight = Number.parseInt(computedStyles.height);
+  box.style.width = currentWidth + width + 'px';
+  box.style.height = currentHeight + height + 'px';
+}
