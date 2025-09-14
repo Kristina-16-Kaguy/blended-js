@@ -112,9 +112,17 @@ UlEl.innerHTML = "";
 // Парні числа повинні мати зелений фон (додати клас even),
 // Непарні числа - жовтий фон (додати клас odd).
 
-// const newDiv
+const newDiv = document.querySelector(".number-container");
+const randomNumber = () => Math.floor(Math.random() * 100) + 1;
 
-// const randomNumber = () => Math.floor(Math.random() * 100) + 1;
+let html = "";
+for (let i = 1; i <= 100; i++) {
+  const randomNum = randomNumber();
+  const classEl = randomNum % 2 === 0 ? "even" : "odd";
+  html += `<div class="number ${classEl}">${randomNum}</div>`;
+}
+
+newDiv.insertAdjacentHTML("beforeend", html);
 
 // Завдання 3
 
